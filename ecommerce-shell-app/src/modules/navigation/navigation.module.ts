@@ -11,6 +11,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   NavPrimaryComponent,
@@ -25,6 +26,7 @@ const COMPONENTS = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
+    FormsModule,
     MenubarModule,
     TabMenuModule,
     InputTextModule,
