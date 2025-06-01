@@ -36,11 +36,6 @@ export class NavPrimaryComponent implements OnInit {
         icon: 'pi pi-envelope',
         routerLink: '/contact',
       },
-      {
-        label: 'Footer',
-        icon: 'pi pi-info',
-        routerLink: '/footer',
-      },
     ];
   }
 }
