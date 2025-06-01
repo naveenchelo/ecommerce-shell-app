@@ -7,6 +7,10 @@ import { NavSecondaryComponent } from './components/desktop/nav-secondary/nav-se
 import { NavigationComponent } from './components/desktop/navigation/navigation.component';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MenubarModule } from 'primeng/menubar';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 const COMPONENTS = [
   NavPrimaryComponent,
@@ -18,7 +22,14 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [RouterModule.forChild(routes), CommonModule],
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule,
+    MenubarModule,
+    TabMenuModule,
+    InputTextModule,
+    ButtonModule,
+  ],
   providers: [],
 })
 export class NavigationModule {}
