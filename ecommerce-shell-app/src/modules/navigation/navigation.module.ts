@@ -10,7 +10,6 @@ import { FooterComponent } from './components/footer/footer.component';
 
 const COMPONENTS = [
   NavPrimaryComponent,
-  NavPrimaryComponent,
   NavSecondaryComponent,
   NavigationComponent,
   FooterComponent,
