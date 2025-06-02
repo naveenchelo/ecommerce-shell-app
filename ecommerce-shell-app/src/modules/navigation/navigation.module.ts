@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { routes } from './navigation.routing';
 import { NavPrimaryComponent } from './components/desktop/nav-primary/nav-primary.component';
-import { NavSecondaryComponent } from './components/desktop/nav-secondary/nav-secondary.component';
 import { NavigationComponent } from './components/desktop/navigation/navigation.component';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,7 +14,6 @@ import { FormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   NavPrimaryComponent,
-  NavSecondaryComponent,
   NavigationComponent,
   FooterComponent,
   SearchComponent,

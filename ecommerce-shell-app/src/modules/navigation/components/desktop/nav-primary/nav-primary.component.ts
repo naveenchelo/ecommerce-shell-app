@@ -10,8 +10,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavPrimaryComponent implements OnInit {
   public menuItems: MenuItem[] = [];
-  public showSearch = false;
-  public searchQuery = '';
+  public endMenuItems: MenuItem[] = [];
 
   constructor(private router: Router) {}
 
@@ -23,55 +22,29 @@ export class NavPrimaryComponent implements OnInit {
     this.menuItems = [
       {
         label: 'Men',
-        icon: 'pi pi-male',
         routerLink: '/men',
       },
       {
         label: 'Women',
-        icon: 'pi pi-female',
         routerLink: '/women',
       },
       {
         label: 'Kids',
-        icon: 'pi pi-users',
         routerLink: '/kids',
-      },
+      }
+    ];
+
+    this.endMenuItems = [
       {
-        label: 'Search',
-        icon: 'pi pi-search',
-        styleClass: 'search-item',
-        command: () => this.toggleSearch(),
+        label: 'Cart',
+        icon: 'pi pi-shopping-cart',
+        routerLink: '/cart',
       },
       {
         label: 'Profile',
         icon: 'pi pi-user',
         routerLink: '/profile',
       },
-      {
-        label: 'Cart',
-        icon: 'pi pi-shopping-cart',
-        routerLink: '/cart',
-      }
     ];
   }
-
-  toggleSearch(): void {
-    this.showSearch = !this.showSearch;
-    if (this.showSearch) {
-      setTimeout(() => {
-        const searchInput = document.querySelector('.search-container input');
-        if (searchInput) {
-          (searchInput as HTMLElement).focus();
-        }
-      }, 0);
-    }
-  }
-
-  onSearch(): void {
-    if (this.searchQuery.trim()) {
-      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery } });
-      this.searchQuery = '';
-      this.showSearch = false;
-    }
-  }
-}
+} 

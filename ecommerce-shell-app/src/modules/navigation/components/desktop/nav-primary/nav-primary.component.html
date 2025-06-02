@@ -1,13 +1,10 @@
 <p-menubar [model]="menuItems">
-    <ng-template pTemplate="start">
-     <p>Logo</p>
-    </ng-template>
-    <ng-template pTemplate="end">
-      <div *ngIf="showSearch" class="search-container">
-        <span class="p-input-icon-left">
-          <i class="pi pi-search"></i>
-          <input pInputText type="text" placeholder="Search..." [(ngModel)]="searchQuery" (keyup.enter)="onSearch()">
-        </span>
-      </div>
-    </ng-template>
-  </p-menubar> 
+  <ng-template pTemplate="start">
+    <div class="ecom-icon">
+      <img class="ecom-logo" src="myntra.webp" alt="Ecom logo">
+    </div>  
+  </ng-template>
+  <ng-template pTemplate="end">
+    <p-menubar [model]="endMenuItems" [style]="{'border': 'none', 'background': 'transparent'}"></p-menubar>
+  </ng-template>
+</p-menubar> 
